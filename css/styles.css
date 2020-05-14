@@ -1,12 +1,16 @@
+
 .tagline{
   position: fixed;
+  z-index: 1000;
   font-family: 'Italianno', cursive;
   transform: rotate(90deg);
   top: 50vh;
-  right: -70px;
-  color: #000;
-  font-size: 30px;
+  right: -80px;
+  color: #FFD700;
+  font-size: 35px;
 }
+
+/*----------------------------------- Navigation Menu Section -------------------------------------------*/
 #cart {
   position: fixed;
   width: 50px;
@@ -18,7 +22,7 @@
   line-height: 50px;
   color: #fff;
   font-size: 20px;
-  z-index: 10;
+  z-index: 1000;
   border-radius: 26px;
 }
 
@@ -31,8 +35,9 @@
   font-size: 14px;
   background-color: #2e353d;
   position: fixed;
+  z-index: 999;
   top: 0px;
-  width: 300px;
+  width: 260px;
   height: 100%;
 }
 .nav-side-menu .brand {
@@ -41,7 +46,7 @@
   display: block;
   text-align: center;
   font-size: 40px;
-  color: #fff;
+  color: #FFD700;
   font-family: 'Italianno', cursive;
 }
 .nav-side-menu .toggle-btn {
@@ -63,7 +68,7 @@
 }
 .nav-side-menu .login{
   display: inline-block;
-  width: 150px;
+  width: 130px;
   color: #fff;
   line-height: 35px;
   text-decoration: none;
@@ -119,6 +124,7 @@
   padding-left: 10px;
   padding-right: 10px;
   vertical-align: middle;
+  color: #fff;
 }
 .nav-side-menu li {
   padding-left: 0px;
@@ -147,10 +153,11 @@
   }
 
   .nav-side-menu {
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
     margin-bottom: 10px;
-  height:inherit;
+    height:inherit;
   }
   .nav-side-menu .login{
   width: 50%;
@@ -182,4 +189,69 @@
 body {
   margin: 0px;
   padding: 0px;
+}
+
+/*----------------------------------- Main Section -------------------------------------------*/
+
+.main-container{
+  margin-left: 260px;
+}
+
+/*Slider*/
+.carousel{
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  margin: 10px 10px 50px 10px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+}
+.carousel-item{
+  height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .main-container{
+    margin-left: 0;
+    margin-top: 62px;
+  }
+}
+
+/*Products Categories*/
+
+.products_img img{
+  max-width: 100%;
+  margin: 10px 0 10px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+}
+
+.overly:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 26px;
+  left: 15px;
+  right: 15px;
+  background: rgba(0,0,0, 0.2);
+}
+
+.products_img:hover{
+  opacity: 0.8;
+}
+
+
+.products_img h3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.5vw;
+  font-weight: 600;
+  font-family: Montserrat;
 }
